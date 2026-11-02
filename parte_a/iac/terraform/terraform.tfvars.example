@@ -1,0 +1,8 @@
+# Copia este archivo a terraform.tfvars y ajusta lo que necesites
+region  = "us-east-1"
+project = "finsir"
+
+# Un horario activo ejecuta el pipeline completo
+schedule_enabled    = false
+schedule_expression = "cron(0 6 * * ? *)"
+schedule_timezone   = "America/Bogota"

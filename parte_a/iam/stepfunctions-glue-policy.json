@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "glue:StartJobRun",
+        "glue:GetJobRun",
+        "glue:GetJobRuns",
+        "glue:BatchStopJobRun"
+      ],
+      "Resource": [
+        "arn:aws:glue:us-east-1:593077778483:job/finsir-limpieza-join",
+        "arn:aws:glue:us-east-1:593077778483:job/finsir-rama-altas-producto-mes",
+        "arn:aws:glue:us-east-1:593077778483:job/finsir-rama-penetracion-provincia"
+      ]
+    }
+  ]
+}

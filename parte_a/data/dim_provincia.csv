@@ -1,0 +1,53 @@
+cod_prov,provincia,comunidad_autonoma,poblacion_2016,renta_bruta_hogar_2015,renta_neta_persona_2015
+1,Álava,País Vasco,324126,,
+2,Albacete,Castilla-La Mancha,392118,27962,9150
+3,Alicante,Comunidad Valenciana,1836459,26370,8695
+4,Almería,Andalucía,704297,25538,8029
+5,Ávila,Castilla y León,162514,25821,9745
+6,Badajoz,Extremadura,684113,25056,8448
+7,Illes Balears,Islas Baleares,1107220,37416,11213
+8,Barcelona,Cataluña,5542680,41240,12853
+9,Burgos,Castilla y León,360995,34245,12093
+10,Cáceres,Extremadura,403665,24706,9081
+11,Cádiz,Andalucía,1239889,27311,8489
+12,Castellón,Comunidad Valenciana,579245,30217,10136
+13,Ciudad Real,Castilla-La Mancha,506888,26652,8786
+14,Córdoba,Andalucía,791610,26424,8614
+15,A Coruña,Galicia,1122799,33199,11024
+16,Cuenca,Castilla-La Mancha,201071,25607,9009
+17,Girona,Cataluña,753576,35373,11095
+18,Granada,Andalucía,915392,26719,8877
+19,Guadalajara,Castilla-La Mancha,252882,33717,11036
+20,Gipuzkoa,País Vasco,717832,,
+21,Huelva,Andalucía,519596,26066,8401
+22,Huesca,Aragón,221079,33471,11297
+23,Jaén,Andalucía,648250,24838,8318
+24,León,Castilla y León,473604,30549,11138
+25,Lleida,Cataluña,434041,33463,10914
+26,La Rioja,La Rioja,315794,32699,11191
+27,Lugo,Galicia,336527,28775,10283
+28,Madrid,Comunidad de Madrid,6466996,46273,13779
+29,Málaga,Andalucía,1629298,26942,8688
+30,Murcia,Región de Murcia,1464847,30213,8908
+31,Navarra,Navarra,640647,,
+32,Ourense,Galicia,314853,27403,10189
+33,Asturias,Asturias,1042608,33165,11959
+34,Palencia,Castilla y León,164644,31484,11392
+35,Las Palmas,Canarias,1097800,31155,9548
+36,Pontevedra,Galicia,944346,31658,10153
+37,Salamanca,Castilla y León,335985,29221,10667
+38,Santa Cruz de Tenerife,Canarias,1004124,28913,9073
+39,Cantabria,Cantabria,582206,33326,11229
+40,Segovia,Castilla y León,155652,31087,10730
+41,Sevilla,Andalucía,1939775,29464,9051
+42,Soria,Castilla y León,90040,32738,11674
+43,Tarragona,Cataluña,792299,33511,10817
+44,Teruel,Aragón,136977,31746,10911
+45,Toledo,Castilla-La Mancha,688672,27511,8845
+46,Valencia,Comunidad Valenciana,2544264,31727,10377
+47,Valladolid,Castilla y León,523679,34319,11682
+48,Bizkaia,País Vasco,1147576,40830,13949
+49,Zamora,Castilla y León,180406,25961,9859
+50,Zaragoza,Aragón,950507,36134,12020
+51,Ceuta,Ceuta,84519,39971,10696
+52,Melilla,Melilla,86026,39402,9961

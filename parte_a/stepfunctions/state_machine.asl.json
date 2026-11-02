@@ -1,0 +1,91 @@
+{
+  "Comment": "Trabajo 2, parte A: trabajo de Glue inicial (limpieza y join) y despues dos agrupaciones en paralelo",
+  "StartAt": "LimpiezaJoin",
+  "States": {
+    "LimpiezaJoin": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "finsir-limpieza-join"
+      },
+      "ResultPath": null,
+      "TimeoutSeconds": 3600,
+      "Retry": [
+        {
+          "ErrorEquals": ["States.TaskFailed"],
+          "IntervalSeconds": 10,
+          "MaxAttempts": 1,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "PipelineFallido"
+        }
+      ],
+      "Next": "RamasEnParalelo"
+    },
+    "RamasEnParalelo": {
+      "Type": "Parallel",
+      "Branches": [
+        {
+          "StartAt": "RamaAltasProductoMes",
+          "States": {
+            "RamaAltasProductoMes": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters": {
+                "JobName": "finsir-rama-altas-producto-mes"
+              },
+              "TimeoutSeconds": 3600,
+              "Retry": [
+                {
+                  "ErrorEquals": ["States.TaskFailed"],
+                  "IntervalSeconds": 10,
+                  "MaxAttempts": 1,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "RamaPenetracionProvincia",
+          "States": {
+            "RamaPenetracionProvincia": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters": {
+                "JobName": "finsir-rama-penetracion-provincia"
+              },
+              "TimeoutSeconds": 3600,
+              "Retry": [
+                {
+                  "ErrorEquals": ["States.TaskFailed"],
+                  "IntervalSeconds": 10,
+                  "MaxAttempts": 1,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "PipelineFallido"
+        }
+      ],
+      "End": true
+    },
+    "PipelineFallido": {
+      "Type": "Fail",
+      "Error": "PipelineFallido",
+      "Cause": "Un trabajo de Glue termino con error despues de su reintento. Revisa los logs en CloudWatch."
+    }
+  }
+}
