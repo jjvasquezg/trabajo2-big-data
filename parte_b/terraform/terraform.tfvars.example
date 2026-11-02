@@ -1,0 +1,19 @@
+# Copia este archivo a terraform.tfvars y ajusta lo que necesites
+region  = "us-east-1"
+project = "finsir"
+
+# Stream
+shard_count            = 1
+stream_retention_hours = 24
+
+# Ventanas de la Lambda
+window_seconds = 60
+batch_size     = 200
+
+# Rango de montos validos; por fuera el evento es invalido
+amount_min = 0
+amount_max = 50000
+
+# Firehose: acumula hasta 60 s o 1 MB antes de escribir a S3
+firehose_buffer_seconds = 60
+firehose_buffer_mb      = 1
