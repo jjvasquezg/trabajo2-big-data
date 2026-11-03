@@ -16,4 +16,4 @@ La guía de [parte B](parte_b/README.md) describe la arquitectura y los pasos pa
 
 ## Declaración de uso de IA
 
-Se utilizó una herramienta de inteligencia artificial como apoyo para crear y revisar scripts, documentación y sentencias o artefactos de Terraform incluidos en el repositorio. El equipo debe revisar esos materiales, validar que correspondan a la implementación realizada y poder explicar su funcionamiento.
+El detalle de qué artefactos del repositorio se apoyaron en herramientas de inteligencia artificial está en [declaracion_uso_ia.md](declaracion_uso_ia.md).

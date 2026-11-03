@@ -4,9 +4,9 @@ locals {
   account_id  = data.aws_caller_identity.current.account_id
   bucket_name = var.bucket_name != "" ? var.bucket_name : "${var.project}-trabajo2-${local.account_id}"
 
-  # Los scripts y la dimension de provincias viven en parte-a/, fuera de iac/,
+  # Los scripts y la dimension de provincias viven en parte_a/, fuera de terraform/,
   # porque son los mismos archivos que se suben a mano en la guia de la consola
-  parte_a = "${path.module}/../../parte-a"
+  parte_a = "${path.module}/.."
 
   # Los mismos nombres que la maquina de estados (state_machine.asl.json)
   job_limpieza    = "${var.project}-limpieza-join"

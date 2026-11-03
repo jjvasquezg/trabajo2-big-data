@@ -1,0 +1,10 @@
+# Terraform build artifacts and state
+terraform/.build/
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+
+# Producer output
+producer_summary.json
+__pycache__/
