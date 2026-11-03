@@ -281,10 +281,14 @@ python -m pytest glue
 
 Hazlo **solo después** de entregar y sustentar.
 
-**Con Terraform** (el bucket se vacía solo por `force_destroy_bucket`):
+**Con Terraform.** Con `force_destroy_bucket = true` (el valor por defecto) el bucket se vacía solo. Si lo pusiste en `false`, o el `destroy` falla con `BucketNotEmpty`, vacía el bucket primero y vuelve a correr `destroy`:
 
 ```bash
 cd terraform
+
+# Vacía el bucket (incluye los resultados de Athena y lo que generó Glue)
+aws s3 rm "s3://$(terraform output -raw bucket)" --recursive
+
 terraform destroy
 ```
 
