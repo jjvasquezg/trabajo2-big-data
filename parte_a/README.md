@@ -56,7 +56,7 @@ Las tres capas de datos siguen el patrón clásico: **raw** (datos crudos), **si
 | Conjunto                                                                        | Archivo                                                 | Registros      | Columna en común |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------- | -------------- | ---------------- |
 | Clientes y productos de Santander, 17 cortes mensuales (enero 2015 a mayo 2016) | `train_ver2.csv`, 2.3 GB, 48 columnas                   | **13 647 309** | `cod_prov`       |
-| Provincias de España: comunidad, población (2016) y renta (2015), del INE       | [dim_provincia.csv](data/dim_provincia.csv), 6 columnas | 52             | `cod_prov`       |
+| Provincias de España: comunidad, población (2016) y renta (2015), del INE       | [dim_provincia.csv](data/dim_provincia.csv), 2.3 KB, 6 columnas | 52             | `cod_prov`       |
 
 El primer conjunto tiene 13.6 millones de registros, por encima del mínimo de 5 millones. El segundo son datos oficiales del Instituto Nacional de Estadística (INE), que se pueden reutilizar citando la fuente. Se descargaron de su API (`servicios.ine.es/wstempus`):
 
