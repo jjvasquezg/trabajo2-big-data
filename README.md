@@ -1,6 +1,25 @@
 # Trabajo 2: procesamiento de datos en AWS
 
-Este repositorio contiene las dos partes del trabajo práctico de Big Data del proyecto FINSIR. La parte A implementa un flujo batch y la parte B un flujo de streaming. En sus respectivos README se encuentran el contexto, los recursos utilizados y el paso a paso para crear y replicar cada solución.
+**Curso:** Almacenamiento de Datos (SI7006), Universidad EAFIT, 2026-2.
+
+**Enunciado:** [SI7006-262-trabajo2.pdf](SI7006-262-trabajo2.pdf)
+
+| Entrega | Información |
+| --- | --- |
+| Integrante 1 | Juan Felipe Restrepo |
+| Integrante 2 | Manuela Castaño |
+| Integrante 3 | Juan Jose Vasquez |
+
+## Video explicativo: [Ver en YouTube](https://www.youtube.com/watch?v=_40U-gqOp2A)
+
+## ¿Qué contiene el proyecto?
+
+Este repositorio reúne las dos partes del trabajo práctico de Big Data del proyecto FINSIR. La parte A implementa un flujo batch y la parte B un flujo de streaming. En sus respectivos README se encuentra el paso a paso para crear y replicar cada solución, junto con el contexto y los recursos utilizados.
+
+| Parte | Propósito | Flujo general | Guía detallada |
+| --- | --- | --- | --- |
+| **A: pipeline batch** | Procesar y analizar datos de clientes y productos bancarios de Santander, enriquecidos con información provincial del INE. | Datos CSV en S3 → AWS Glue limpia, transforma y combina → S3 guarda Parquet → Step Functions ejecuta dos ramas de análisis → Athena consulta los resultados. | [README de la parte A](parte_a/README.md) |
+| **B: streaming** | Procesar eventos financieros en tiempo real, calcular métricas por categoría y conservar los eventos originales. | Productor → Kinesis Data Streams → Lambda y Firehose → DynamoDB y S3. | [README de la parte B](parte_b/README.md) |
 
 ## Parte A: pipeline batch
 
