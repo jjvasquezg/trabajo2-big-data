@@ -20,4 +20,4 @@ Se usó IA para crear:
 
 ## Documentación
 
-Se usó IA para complementar y mejorar los archivos de documentación Markdown (`.md`) del repositorio, incluidos este documento y los README de la raíz, la parte A y la parte B.
+Se usó IA para complementar y mejorar los archivos de documentación Markdown (`.md`) del repositorio, incluidos este documento y los README de la raíz, la parte A y la parte B. Y también el informe final que une ambos README de cada parte para una mejor y más completa explicación.
