@@ -279,8 +279,6 @@ python -m pytest glue
 
 ## Borrar todo al terminar
 
-Hazlo **solo después** de entregar y sustentar.
-
 **Con Terraform.** Con `force_destroy_bucket = true` (el valor por defecto) el bucket se vacía solo. Si lo pusiste en `false`, o el `destroy` falla con `BucketNotEmpty`, vacía el bucket primero y vuelve a correr `destroy`:
 
 ```bash
